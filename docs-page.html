@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Andalucía Descubre Documentación</title>
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description" content="AndaluciaDescubre Documentación">
+	<link rel="shortcut icon" href="favicon.ico">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+
+	<script defer src="assets/fontawesome/js/all.min.js"></script>
+
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+	<link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+
+	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/coderdocs-logo.svg">
+
+</head>
+
+<body class="docs-page">
+	<header class="header fixed-top">
+		<div class="branding docs-branding">
+			<div class="container-fluid position-relative py-2">
+				<div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+						type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+								src="assets/images/coderdocs-logo.svg" alt="logo"><span
+								class="logo-text">AndalucíaDescubre<span class="text-alt">Docs</span></span></a></div>
+				</div>
+				<div class="docs-top-utilities d-flex justify-content-end align-items-center">
+
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="https://github.com/usuariozombie"><i
+									class="fab fa-github fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="https://x.com/AndaluciaJunta"><i
+									class="fab fa-twitter fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.facebook.com/AndaluciaJunta/?locale=es_ES"><i
+									class="fab fa-facebook-f fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.instagram.com/andaluciajunta/"><i
+									class="fab fa-instagram fa-fw"></i></a></li>
+					</ul>
+					<a href="#" class="btn btn-primary d-none d-lg-flex">GitHub</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<div class="docs-wrapper">
+		<div id="docs-sidebar" class="docs-sidebar">
+			<div class="top-search-box d-lg-none p-3">
+				<form class="search-form">
+					<input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+					<button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+				</form>
+			</div>
+			<nav id="docs-nav" class="docs-nav navbar">
+				<ul class="section-items list-unstyled nav flex-column pb-3">
+					<li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+								class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introducción</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Tecnologías usadas en el
+							proyecto</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Diseño del proyecto</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Panel de administrador</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Despliegue en
+							local</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Despliegue de la API</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Despliegue del front</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
+								class="theme-icon-holder me-2"><i class="fas fa-box"></i></span>APIs</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">/api (TOWNS)</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">/auth (USERS)</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+								class="theme-icon-holder me-2"><i class="fas fa-cogs"></i></span>Securización</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">JWT</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">CORS</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">IP Whitelisting</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
+								class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Despliegue</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Servidor</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">Base de datos</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-3">VPS</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span
+								class="theme-icon-holder me-2"><i class="fas fa-tablet-alt"></i></span>Versión móvil</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-1">Funcionalidades</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">Diseño</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span
+								class="theme-icon-holder me-2"><i class="fas fa-book-reader"></i></span>Gestión de
+							usuarios</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-1">Usuarios</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-2">Gestores de pueblo</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">Administradores</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
+								class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Preguntas de usuarios</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Preguntas técnicas</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Preguntas de gestores de
+							pueblo</a></li>
+				</ul>
+
+			</nav>
+		</div>
+		<div class="docs-content">
+			<div class="container">
+				<article class="docs-article" id="section-1">
+					<header class="docs-header">
+						<h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 2019-06-01</span>
+						</h1>
+						<section class="docs-intro">
+							<p>La aplicación de Andalucía Descubre está no solo orientada a los usuarios finales, sino
+								también a
+								programadores que deseen integrar la información de la misma en sus propias
+								aplicaciones. Para ello,
+								ponemos a disposición de los desarrolladores una API REST que permite acceder a la
+								información de
+								Andalucía DEscubre de forma estructurada y en tiempo real, además de una documentación
+								que explica
+								el frontal de la aplicación y cómo se ha desarrollado para servir de guía a los
+								programadores que
+								deseen integrar la información de Andalucía Descubre en sus propias aplicaciones.</p>
+							</p>
+						</section>
+
+						<h5>Endpoints de la API: </h5>
+						<p>El código ha sido mostrado usando <a class="theme-link" href="https://gist.github.com/"
+								target="_blank">Github gists</a></p>
+						<div class="docs-code-block">
+
+							<script
+								src="https://gist.github.com/usuariozombie/a485a82c353ae63386568377974bff99.js"></script>
+
+						</div>
+
+						<h5>Ejemplo de respuesta de API:</h5>
+
+						<script
+							src="https://gist.github.com/usuariozombie/17cbd31c55807d20ddbf9306b0b6d3f8.js"></script>
+
+
+					</header>
+					<section class="docs-section" id="item-1-1">
+						<h2 class="section-heading">Tecnologías usadas en el proyecto</h2>
+						<p>El proyecto de Andalucía Descubre ha sido desarrollado con las siguientes tecnologías:</p>
+						<h3>Frontend</h3>
+						<ul>
+							<li><strong class="me-1">Angular:</strong> Framework de desarrollo de aplicaciones web
+								que utiliza Typescript como lenguaje de programación.</li>
+							<li><strong class="me-1">Typescript:</strong> Lenguaje de programación que añade
+								capacidades de programación orientada a objetos a Javascript.</li>
+							<li><strong class="me-1">SCSS
+									(Sass):</strong> Preprocesador CSS que añade funcionalidades como variables,
+								mixins y anidamiento.</li>
+							<li><strong class="me-1">Bootstrap 5:</strong> Framework de diseño web que facilita la
+								creación de interfaces web.</li>
+							<li><strong class="me-1">Font Awesome:</strong> Biblioteca de iconos que facilita la
+								inclusión de iconos en las aplicaciones web.</li>
+							<li><strong class="me-1">Node:</strong> Entorno de ejecución de Javascript que permite
+								ejecutar Javascript en el servidor.</li>
+							<li><strong class="me-1">NPM:</strong> Gestor de paquetes de Node que facilita la
+								instalación de paquetes y dependencias.</li>
+						</ul>
+						<h3>Backend</h3>
+						<ul>
+							<li><strong class="me-1">FastAPI:</strong> Framework de desarrollo de APIs web con
+								Python.</li>
+							<li><strong class="me-1">Python:</strong> Lenguaje de programación utilizado para
+								desarrollar la API.</li>
+							<li><strong class="me-1">MySQL:</strong> Sistema de gestión de bases de datos
+								relacionales.</li>
+							<li><strong class="me-1">PIP:</strong> Gestor de paquetes de Python que facilita la
+								instalación de paquetes y dependencias.</li>
+							<li><strong class="me-1">Uvicorn:</strong> Servidor ASGI que permite ejecutar
+								aplicaciones web desarrolladas con FastAPI.</li>
+						</ul>
+
+						<h5>A tener en cuenta:</h5>
+						<div class="callout-block callout-block-info">
+
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-info-circle"></i>
+									</span>
+									Nota
+								</h4>
+								<p>
+									El proyecto de Andalucía Descubre es totalmente Open Source y está disponible en
+									GitHub para que cualquier desarrollador pueda contribuir a su mantenimiento y
+									evolución.
+								</p>
+							</div>
+						</div>
+
+						<div class="callout-block callout-block-warning">
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-bullhorn"></i>
+									</span>
+									Atención
+								</h4>
+								<p>
+									El proyecto de Andalucía Descubre es un proyecto en constante evolución y
+									mantenimiento, por lo que es posible que algunas de las tecnologías utilizadas en el
+									proyecto cambien en el futuro.
+								</p>
+							</div>
+						</div>
+
+						<div class="callout-block callout-block-success">
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-thumbs-up"></i>
+									</span>
+									Consejo
+								</h4>
+								<p>
+									Si tienes cualquier duda o sugerencia sobre el proyecto de Andalucía Descubre, no
+									dudes en ponerte en contacto con nosotros o abrir un issue en GitHub.
+								</p>
+							</div>
+						</div>
+
+						<div class="callout-block callout-block-danger me-1">
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder">
+										<i class="fas fa-exclamation-triangle"></i>
+									</span>
+									Advertencia
+								</h4>
+								<p>
+									Si vas a contribuir al proyecto de Andalucía Descubre, asegúrate de seguir las
+									guías de contribución y de respetar el código de conducta del proyecto.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<section class="docs-section" id="item-1-2">
+						<h2 class="section-heading">Diseño del proyecto</h2>
+						<p>
+							El proyecto de Andalucía Descubre tiene como finalidad principal ofrecer a los usuarios
+							información sobre los lugares más emblemáticos de Andalucía, así como facilitar la
+							planificación de rutas turísticas y la reserva de alojamientos y actividades en la región.
+
+							El diseño del proyecto se ha realizado siguiendo las mejores prácticas de diseño web y
+							desarrollo de aplicaciones, con el objetivo de ofrecer una experiencia de usuario
+							intuitiva y atractiva.
+
+							Cuenta con un buscador de lugares, un mapa interactivo con los puntos de interés de
+							cada localidad y un filtrado por provincias para facilitar la búsqueda de información.
+						</p>
+						<h5 class="mt-5">Capturas:</h5>
+
+						<p>Abajo encontrarás imágenes del sitio web</p>
+
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+								<a
+									href="https://cdn.discordapp.com/attachments/888067531846328390/1249001269696397343/image.png?ex=6665b694&is=66646514&hm=be76fb3ef3a2ead5b959441862b41010a690356904ad7ae3510a772385443026&"><img
+										class="figure-img img-fluid shadow rounded"
+										src="https://cdn.discordapp.com/attachments/888067531846328390/1249001269696397343/image.png?ex=6665b694&is=66646514&hm=be76fb3ef3a2ead5b959441862b41010a690356904ad7ae3510a772385443026&"
+										alt="" title="CoderPro Home Page" /></a>
+							</div>
+							<div class="col-12 col-md-4 mb-3">
+								<a
+									href="https://cdn.discordapp.com/attachments/888067531846328390/1249001194874077326/image.png?ex=6665b682&is=66646502&hm=e0221a72d69e3f8a395b683517ed46e4c6cf9bf7ea508fdf149b305b76818de0&"><img
+										class="figure-img img-fluid shadow rounded"
+										src="https://cdn.discordapp.com/attachments/888067531846328390/1249001194874077326/image.png?ex=6665b682&is=66646502&hm=e0221a72d69e3f8a395b683517ed46e4c6cf9bf7ea508fdf149b305b76818de0&"
+										alt="" title="CoderPro Features Page" /></a>
+							</div>
+							<div class="col-12 col-md-4 mb-3">
+								<a
+									href="https://cdn.discordapp.com/attachments/888067531846328390/1249001326600519680/image.png?ex=6665b6a1&is=66646521&hm=124682aa63ecc17d3dcd778fe4b579b9b8301354a4f5fb868f91d800e1729dc3&"><img
+										class="figure-img img-fluid shadow rounded"
+										src="https://cdn.discordapp.com/attachments/888067531846328390/1249001326600519680/image.png?ex=6665b6a1&is=66646521&hm=124682aa63ecc17d3dcd778fe4b579b9b8301354a4f5fb868f91d800e1729dc3&"
+										alt="" title="CoderPro Pricing Page" /></a>
+							</div>
+
+						</div>
+
+						<h5>Tabla de colores corporativos:</h5>
+						<div class="table-responsive my-4">
+							<table class="table table-bordered">
+								<tbody>
+									<tr>
+										<th class="theme-bg-light"><a class="theme-link" href="#">Primario</a></th>
+										<td>El color primario de Andalucía Descubre es el verde #007932 y se utiliza
+											para
+											destacar elementos importantes en la interfaz de usuario.</td>
+									</tr>
+									<tr>
+										<th class="theme-bg-light"><a class="theme-link" href="#">Secundario</a></th>
+										<td>El color secundario de Andalucía Descubre es el verde claro #368f3f y se
+											utiliza
+											para los elementos secundarios.</td>
+									</tr>
+
+									<tr>
+										<th class="theme-bg-light"><a class="theme-link" href="#">Otros:</a></th>
+										<td>El color blanco se utiliza para el fondo de la página y el negro para el
+											texto en la mayoría de los casos.
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+
+					</section>
+
+					<section class="docs-section" id="item-1-3">
+						<h2 class="section-heading">Panel de administrador</h2>
+						<p>
+							La herramienta cuenta con un panel de administrador dirigido a cada uno de los
+							alcaldes, para poder habilitar un espacio en la web con toda la información relevante
+							de su localidad, además de anunciar atractivos turísticos para fomentarlo.
+						</p>
+						<h5 class="mt-5">Capturas:</h5>
+
+						<p>Abajo encontrarás imágenes del sitio web</p>
+
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+								<a
+									href="https://cdn.discordapp.com/attachments/888067531846328390/1249074551112073400/image.png?ex=6665fad3&is=6664a953&hm=8b8d8d0c414eb25b20021bd28a45006902588ad11cddf5843152a86a65478e53&"><img
+										class="figure-img img-fluid shadow rounded"
+										src="https://cdn.discordapp.com/attachments/888067531846328390/1249074551112073400/image.png?ex=6665fad3&is=6664a953&hm=8b8d8d0c414eb25b20021bd28a45006902588ad11cddf5843152a86a65478e53&"
+										alt="" title="CoderPro Home Page" /></a>
+							</div>
+							<div class="col-12 col-md-4 mb-3">
+								<a
+									href="https://cdn.discordapp.com/attachments/888067531846328390/1249074588877324298/image.png?ex=6665fadc&is=6664a95c&hm=1a3fcbdfda58840f03d6bd0a3c5d54b162eae65da36adc835ff8f88c53d43df4&"><img
+										class="figure-img img-fluid shadow rounded"
+										src="https://cdn.discordapp.com/attachments/888067531846328390/1249074588877324298/image.png?ex=6665fadc&is=6664a95c&hm=1a3fcbdfda58840f03d6bd0a3c5d54b162eae65da36adc835ff8f88c53d43df4&"
+										alt="" title="CoderPro Features Page" /></a>
+							</div>
+							<div class="col-12 col-md-4 mb-3">
+								<a
+									href="https://cdn.discordapp.com/attachments/888067531846328390/1249074637351161917/image.png?ex=6665fae8&is=6664a968&hm=6b6dd7d1d6fbe7265a2ff6a235e5b9c28b60328d472fbbcf9efdec3c2400c5cb&"><img
+										class="figure-img img-fluid shadow rounded"
+										src="https://cdn.discordapp.com/attachments/888067531846328390/1249074637351161917/image.png?ex=6665fae8&is=6664a968&hm=6b6dd7d1d6fbe7265a2ff6a235e5b9c28b60328d472fbbcf9efdec3c2400c5cb&"
+										alt="" title="CoderPro Pricing Page" /></a>
+							</div>
+						</div>
+
+						<p>
+							En el caso del panel de administrador, se ha optado por un diseño minimalista y
+							funcional, que permite a los alcaldes gestionar la información de su localidad de forma
+							sencilla y rápida.
+
+							El panel de administrador cuenta con las siguientes funcionalidades:
+
+						</p>
+						<ul>
+							<li>Creación y edición de platos.</li>
+							<li>Creación y edición de eventos.</li>
+							<li>Creación y edición de monumentos.</li>
+							<li>Edición de mapa de la localidad.</li>
+						</ul>
+					</section>
+
+
+				</article>
+
+				<article class="docs-article" id="section-2">
+					<header class="docs-header">
+						<h1 class="docs-heading">Despliegue en local</h1>
+						<section class="docs-intro">
+							<p>
+								La aplicación de Andalucía Descubre está disponible en la web y se puede acceder a
+								ella desde cualquier dispositivo con conexión a Internet. Pero si deseas desplegar la
+								aplicación en tu propio servidor, a continuación te mostramos cómo hacerlo.
+							</p>
+						</section>
+					</header>
+					<section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Despliegue de la API</h2>
+						<p>
+							Para desplegar la API de Andalucía Descubre en tu propio servidor, sigue los siguientes
+							pasos:
+
+						<ol>
+							<li>Clona el repositorio de la API de Andalucía Descubre desde GitHub.</li>
+							<li>Instala las dependencias de la API utilizando el gestor de paquetes de Python
+								PIP.</li>
+							<li>Configura la conexión a la base de datos MySQL en el archivo de configuración de
+								la API.</li>
+							<li>Crea las tablas necesarias en la base de datos MySQL.</li>
+							<li>Arranca el servidor de la API utilizando el comando de Uvicorn.</li>
+						</ol>
+
+						<h5>Comandos:</h5>
+
+						<div class="docs-code-block">
+							<pre>
+								<code>
+git clone (url del repositorio)
+
+pip install -r requirements.txt
+
+uvicorn main:app --reload
+								</code>
+							</pre>
+
+						</div>
+
+						</p>
+					</section>
+
+					<section class="docs-section" id="item-2-2">
+						<h2 class="section-heading">Despliegue del Front</h2>
+						<p>
+							Para desplegar el frontend de Andalucía Descubre en tu propio servidor, sigue los
+							siguientes pasos:
+
+						<ol>
+							<li>Clona el repositorio del frontend de Andalucía Descubre desde GitHub.</li>
+							<li>Instala las dependencias del frontend utilizando el gestor de paquetes de Node
+								NPM.</li>
+							<li>Configura la URL de la API en el archivo de configuración del frontend.</li>
+							<li>Arranca el servidor de desarrollo del frontend utilizando el comando de Angular.</li>
+						</ol>
+
+						<h5>Comandos:</h5>
+
+						<div class="docs-code-block">
+							<pre>
+								<code>
+git clone (url del repositorio)
+
+npm install
+
+ng serve
+								</code>
+							</pre>
+							</p>
+					</section>
+				</article>
+
+
+				<article class="docs-article" id="section-3">
+					<header class="docs-header">
+						<h1 class="docs-heading">APIs</h1>
+						<section class="docs-intro">
+							<p>
+								La API de Andalucía Descubre está diseñada para ser fácil de usar y flexible,
+								permitiendo
+								a los desarrolladores acceder a la información de la aplicación de forma estructurada y
+								en tiempo real.
+
+								La API cuenta con varios endpoints que permiten acceder a la información de los lugares
+								más emblemáticos de Andalucía, así como a la información de los eventos, platos y
+								monumentos de la región.
+
+								En esta sección encontrarás una descripción detallada de los endpoints de la API, así
+								como ejemplos de las respuestas que devuelven.
+							</p>
+						</section>
+					</header>
+					<section class="docs-section" id="item-3-1">
+						<h2 class="section-heading">/api (TOWNS)</h2>
+						<p>
+							El endpoint /api de la API de Andalucía Descubre permite acceder a la información de los
+							lugares más emblemáticos de Andalucía, así como a la información de los eventos, platos y
+							monumentos de la región.
+
+							El endpoint /api cuenta con los siguientes subendpoints:
+
+						<ul>
+							<li>/towns (POST): Permite crear una nueva localidad.</li>
+							<li>/towns (GET): Permite obtener la información de una todas las localidades.</li>
+							<li>/towns/{id} (GET): Permite obtener la información de una localidad en concreto.</li>
+							<li>/towns/{id} (PUT): Permite actualizar la información de una localidad en concreto.</li>
+							<li>/towns/{id} (DELETE): Permite eliminar una localidad en concreto.</li>
+							<li>/towns/{id}/events (GET): Permite obtener la información de los eventos de una
+								localidad en concreto.</li>
+							<li>/towns/{id}/events (POST): Permite crear un nuevo evento en una localidad en concreto.
+							</li>
+							<li>/towns/{id}/events (DELETE): Permite eliminar un evento en una localidad en concreto.
+							</li>
+							<li>/towns/{id}/dishes (GET): Permite obtener la información de los platos de una localidad
+								en concreto.</li>
+							<li>/towns/{id}/dishes (POST): Permite crear un nuevo plato en una localidad en concreto.
+							</li>
+							<li>/towns/{id}/dishes (DELETE): Permite eliminar un plato en una localidad en concreto.
+							</li>
+							<li>/towns/{id}/monuments (GET): Permite obtener la información de los monumentos de una
+								localidad en concreto.</li>
+							<li>/towns/{id}/monuments (POST): Permite crear un nuevo monumento en una localidad en
+								concreto.</li>
+							<li>/towns/{id}/monuments (DELETE): Permite eliminar un monumento en una localidad en
+								concreto.</li>
+						</ul>
+
+						<h5>Ejemplo de respuesta de cada endpoint:</h5>
+
+						<div class="docs-code-block">
+							<!-- ** /towns (POST) ** -->
+							<h6>/towns (POST)</h6>
+							<pre><code>{
+						"status": 201,
+						"message": "Localidad creada exitosamente",
+						"data": {
+							"townId": 123,
+							"townName": "Nombre de la localidad",
+							"townDescription": "Descripción de la localidad",
+							"townImage": "url de la imagen de la localidad",
+							"townMap": "url del mapa de la localidad"
+						}
+					}</code></pre>
+
+							<!-- ** /towns (GET) ** -->
+							<h6>/towns (GET)</h6>
+							<pre><code>{
+						"status": 200,
+						"data": [
+							{
+								"townId": 123,
+								"townName": "Nombre de la localidad",
+								"townDescription": "Descripción de la localidad",
+								"townImage": "url de la imagen de la localidad",
+								"townMap": "url del mapa de la localidad""
+							},
+							{
+								"townId": 124,
+								"townName": "Otra localidad",
+								"townDescription": "Descripción de otra localidad",
+								"townImage": "url de la imagen de la localidad",
+								"townMap": "url del mapa de la localidad"
+							}
+						]
+					}</code></pre>
+
+							<!-- ** /towns/{id} (GET) ** -->
+							<h6>/towns/{id} (GET)</h6>
+							<pre><code>{
+						"status": 200,
+						"data": {
+							"townId": 123,
+							"townName": "Nombre de la localidad",
+							"townDescription": "Descripción de la localidad",
+							"townImage": "url de la imagen de la localidad",
+							"townMap": "url del mapa de la localidad"
+						}
+					}</code></pre>
+
+							<!-- ** /towns/{id} (PUT) ** -->
+							<h6>/towns/{id} (PUT)</h6>
+							<pre><code>{
+						"status": 200,
+						"message": "Localidad actualizada exitosamente",
+						"data": {
+							"townId": 123,
+							"townName": "Nombre de la localidad actualizado",
+							"townDescription": "Descripción actualizada de la localidad",
+							"townImage": "url de la imagen de la localidad",
+							"townMap": "url del mapa de la localidad"
+						}
+					}</code></pre>
+
+							<!-- ** /towns/{id} (DELETE) ** -->
+							<h6>/towns/{id} (DELETE)</h6>
+							<pre><code>{
+						"status": 200,
+						"message": "Localidad eliminada exitosamente"
+					}</code></pre>
+
+							<!-- ** /towns/{id}/events (GET) ** -->
+							<h6>/towns/{id}/events (GET)</h6>
+							<pre><code>{
+						"status": 200,
+						"data": [
+							{
+								"eventId": 1,
+								"eventName": "Nombre del evento",
+								"eventDescription": "Descripción del evento",
+								"eventDate": "2024-06-01"
+							},
+							{
+								"eventId": 2,
+								"eventName": "Otro evento",
+								"eventDescription": "Descripción de otro evento",
+								"eventDate": "2024-06-15"
+							}
+						]
+					}</code></pre>
+
+							<!-- ** /towns/{id}/events (POST) ** -->
+							<h6>/towns/{id}/events (POST)</h6>
+							<pre><code>{
+						"status": 201,
+						"message": "Evento creado exitosamente",
+						"data": {
+							"eventId": 1,
+							"eventName": "Nombre del evento",
+							"eventDescription": "Descripción del evento",
+							"eventDate": "2024-06-01"
+						}
+					}</code></pre>
+
+							<!-- ** /towns/{id}/events (DELETE) ** -->
+							<h6>/towns/{id}/events (DELETE)</h6>
+							<pre><code>{
+						"status": 200,
+						"message": "Evento eliminado exitosamente"
+					}</code></pre>
+
+							<!-- ** /towns/{id}/dishes (GET) ** -->
+							<h6>/towns/{id}/dishes (GET)</h6>
+							<pre><code>{
+						"status": 200,
+						"data": [
+							{
+								"dishId": 1,
+								"dishName": "Nombre del plato",
+								"dishDescription": "Descripción del plato",
+								"dishImage": "url de la imagen del plato"
+							},
+							{
+								"dishId": 2,
+								"dishName": "Otro plato",
+								"dishDescription": "Descripción de otro plato",
+								"dishImage": "url de la imagen del plato"
+							}
+						]
+					}</code></pre>
+
+							<!-- ** /towns/{id}/dishes (POST) ** -->
+							<h6>/towns/{id}/dishes (POST)</h6>
+							<pre><code>{
+						"status": 201,
+						"message": "Plato creado exitosamente",
+						"data": {
+							"dishId": 1,
+							"dishName": "Nombre del plato",
+							"dishDescription": "Descripción del plato",
+							"dishImage": "url de la imagen del plato"
+						}
+					}</code></pre>
+
+							<!-- ** /towns/{id}/dishes (DELETE) ** -->
+							<h6>/towns/{id}/dishes (DELETE)</h6>
+							<pre><code>{
+						"status": 200,
+						"message": "Plato eliminado exitosamente"
+					}</code></pre>
+
+							<!-- ** /towns/{id}/monuments (GET) ** -->
+							<h6>/towns/{id}/monuments (GET)</h6>
+							<pre><code>{
+						"status": 200,
+						"data": [
+							{
+								"monumentId": 1,
+								"monumentName": "Nombre del monumento",
+								"monumentDescription": "Descripción del monumento",
+								"monumentImage": "url de la imagen del monumento"
+							},
+							{
+								"monumentId": 2,
+								"monumentName": "Otro monumento",
+								"monumentDescription": "Descripción de otro monumento",
+								"monumentImage": "url de la imagen del monumento"
+							}
+						]
+					}</code></pre>
+
+							<!-- ** /towns/{id}/monuments (POST) ** -->
+							<h6>/towns/{id}/monuments (POST)</h6>
+							<pre><code>{
+						"status": 201,
+						"message": "Monumento creado exitosamente",
+						"data": {
+							"monumentId": 1,
+							"monumentName": "Nombre del monumento",
+							"monumentDescription": "Descripción del monumento",
+							"monumentImage": "url de la imagen del monumento"
+						}
+					}</code></pre>
+
+							<!-- ** /towns/{id}/monuments (DELETE) ** -->
+							<h6>/towns/{id}/monuments (DELETE)</h6>
+							<pre><code>{
+						"status": 200,
+						"message": "Monumento eliminado exitosamente"
+					}</code></pre>
+						</div>
+					</section>
+
+					<section class="docs-section" id="item-3-2">
+						<h2 class="section-heading">/auth (USERS)</h2>
+						<p>
+							El endpoint /auth de la API de Andalucía Descubre permite gestionar la autenticación y la
+							administración de usuarios.
+
+							El endpoint /auth cuenta con los siguientes subendpoints:
+
+						<ul>
+							<li>/auth/register (POST): Permite registrar a un nuevo usuario.</li>
+							<li>/auth/login (POST): Permite autenticar a un usuario.</li>
+							<li>/auth/user-info (GET): Permite obtener la información del usuario autenticado.</li>
+							<li>/auth/users (GET): Permite obtener la información de todos los usuarios (requiere
+								permisos de administrador).</li>
+							<li>/auth/admin/login (POST): Permite autenticar a un administrador.</li>
+							<li>/auth/user/{user_id} (PUT): Permite actualizar la información de un usuario en concreto
+								(requiere permisos de administrador).</li>
+							<li>/auth/user/{user_id} (DELETE): Permite eliminar a un usuario en concreto (requiere
+								permisos de administrador).</li>
+							<li>/auth/logs (GET): Permite obtener los registros de acciones (requiere permisos de
+								administrador).</li>
+							<li>/auth/send-email (POST): Permite enviar un correo electrónico.</li>
+						</ul>
+
+						<h5>Ejemplo de respuesta de cada endpoint:</h5>
+
+						<div class="docs-code-block">
+							<!-- ** /auth/register (POST) ** -->
+							<h6>/auth/register (POST)</h6>
+							<pre><code>{
+						"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+					}</code></pre>
+
+							<!-- ** /auth/login (POST) ** -->
+							<h6>/auth/login (POST)</h6>
+							<pre><code>{
+						"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+					}</code></pre>
+
+							<!-- ** /auth/user-info (GET) ** -->
+							<h6>/auth/user-info (GET)</h6>
+							<pre><code>{
+						"user_info": "usuario@example.com"
+					}</code></pre>
+
+							<!-- ** /auth/users (GET) ** -->
+							<h6>/auth/users (GET)</h6>
+							<pre><code>[
+						{
+							"userID": 123,
+							"email": "usuario@example.com",
+							"townID": 1,
+							"dates": {"requested": "2024-01-01T00:00:00Z"},
+							"verified": true,
+							"townName": "Sevilla",
+							"townImage": "image_url"
+						},
+						{
+							"userID": 124,
+							"email": "nuevo_usuario@example.com",
+							"townID": 2,
+							"dates": {"requested": "2024-01-02T00:00:00Z"},
+							"verified": false,
+							"townName": "Granada",
+							"townImage": "image_url"
+						}
+					]</code></pre>
+
+							<!-- ** /auth/admin/login (POST) ** -->
+							<h6>/auth/admin/login (POST)</h6>
+							<pre><code>{
+						"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+					}</code></pre>
+
+							<!-- ** /auth/user/{user_id} (PUT) ** -->
+							<h6>/auth/user/{user_id} (PUT)</h6>
+							<pre><code>{
+						"status": "success",
+						"message": "User updated successfully"
+					}</code></pre>
+
+							<!-- ** /auth/user/{user_id} (DELETE) ** -->
+							<h6>/auth/user/{user_id} (DELETE)</h6>
+							<pre><code>{
+						"status": "success",
+						"message": "User deleted successfully"
+					}</code></pre>
+
+							<!-- ** /auth/logs (GET) ** -->
+							<h6>/auth/logs (GET)</h6>
+							<pre><code>[
+						{
+							"logID": 1,
+							"userID": 123,
+							"userIP": "192.168.1.1",
+							"logDate": "2024-01-01T00:00:00Z",
+							"description": "User registered",
+							"type": "register"
+						},
+						{
+							"logID": 2,
+							"userID": 124,
+							"userIP": "192.168.1.2",
+							"logDate": "2024-01-02T00:00:00Z",
+							"description": "User logged in",
+							"type": "login"
+						}
+					]</code></pre>
+
+							<!-- ** /auth/send-email (POST) ** -->
+							<h6>/auth/send-email (POST)</h6>
+							<pre><code>{
+						"message": "Email sent successfully!"
+					}</code></pre>
+						</div>
+					</section>
+				</article>
+
+				<article class="docs-article" id="section-4">
+					<header class="docs-header">
+						<h1 class="docs-heading">Securización</h1>
+						<section class="docs-intro">
+							<p>
+								La API de Andalucía Descubre cuenta con un sistema de autenticación basado en tokens
+								JWT
+								(JSON Web Tokens) que permite proteger los endpoints de la API y garantizar que solo
+								los
+								usuarios autorizados puedan acceder a la información.
+
+								El sistema de autenticación de la API de Andalucía Descubre se basa en los siguientes
+								principios:
+							</p>
+						</section>
+					</header>
+					<section class="docs-section" id="item-4-1">
+						<h2 class="section-heading">JWT</h2>
+						<p>
+							El sistema de autenticación de la API de Andalucía Descubre utiliza tokens JWT (JSON Web
+							Tokens) para proteger los endpoints de la API y garantizar que solo los usuarios
+							autorizados puedan acceder a la información.
+
+							Los tokens JWT son cadenas de texto codificadas que contienen información sobre el usuario
+							autenticado, así como una firma digital que garantiza la integridad del token.
+
+							Para autenticar a un usuario, la API de Andalucía Descubre genera un token JWT que se
+							envía al cliente, el cual debe incluirlo en las cabeceras de las peticiones a los endpoints
+							protegidos.
+
+							El token JWT tiene una duración limitada y debe ser renovado periódicamente para garantizar
+							la seguridad de la aplicación.
+
+						<h5>Ejemplo de token JWT:</h5>
+
+						<div class="docs-code-block">
+							<pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMjMsImVtYWlsIjoidXN1YXJpb0BleGFtcGxlLmNvbSIsInRvd25faWQiOjEsImRhdGVzIjp7
+
+								</code></pre>
+							</p>
+					</section>
+
+					<section class="docs-section" id="item-4-2">
+						<h2 class="section-heading">CORS</h2>
+						<p>
+							La API de Andalucía Descubre utiliza la política de CORS (Cross-Origin Resource Sharing)
+							para
+							permitir que los clientes web accedan a los recursos de la API desde un dominio diferente.
+
+							La política de CORS de la API de Andalucía Descubre se basa en los siguientes principios:
+
+						<ul>
+							<li>La API solo permite peticiones POST, PUT y DELETE desde el dominio del frontend.</li>
+							<li>La API incluye las cabeceras CORS necesarias en las respuestas para permitir el acceso
+								desde el dominio del frontend.</li>
+							<li>La API verifica el origen de las peticiones y rechaza las peticiones de dominios no
+								autorizados.</li>
+						</ul>
+
+						<h5>Ejemplo de cabeceras CORS:</h5>
+
+						<div class="docs-code-block">
+							<pre><code>Access-Control-Allow-Origin: https://frontend.example.com
+Access-Control-Allow-Methods: POST, PUT, DELETE
+Access-Control-Allow-Headers: Content-Type, Authorization
+Access-Control-Allow-Credentials: true
+								</code></pre>
+
+							</p>
+					</section>
+
+					<section class="docs-section" id="item-4-3">
+						<h2 class="section-heading">IP Whitelisting</h2>
+						<p>
+							La API de Andalucía Descubre utiliza una lista blanca de direcciones IP para restringir el
+							acceso a los endpoints protegidos y garantizar que solo los clientes autorizados puedan
+							acceder a la información.
+
+							La lista blanca de direcciones IP de la API de Andalucía Descubre se basa en los siguientes
+							principios:
+
+						<ul>
+							<li>La API solo permite peticiones desde las direcciones IP autorizadas.</li>
+							<li>La API verifica la dirección IP de las peticiones y rechaza las peticiones de
+								direcciones no autorizadas.</li>
+							<li>La API incluye las cabeceras necesarias en las respuestas para permitir el acceso desde
+								las direcciones IP autorizadas.</li>
+						</ul>
+						</p>
+					</section>
+				</article>
+
+				<article class="docs-article" id="section-5">
+					<header class="docs-header">
+						<h1 class="docs-heading">Despliegue</h1>
+						<section class="docs-intro">
+							<p>
+								En esta sección se detalla como está desplegada la aplicación de Andalucía Descubre en
+								la web, en este caso está en un servidor privado contratado por el equipo de desarrollo,
+								la aplicación está desplegada en un servidor Apache con una base de datos MySQL y
+								también hay una
+								securización del servidor.
+							</p>
+						</section>
+					</header>
+					<section class="docs-section" id="item-5-1">
+						<h2 class="section-heading">Servidor</h2>
+						<p>
+							La aplicación de Andalucía Descubre está desplegada en un servidor privado contratado por el
+							equipo de desarrollo, el servidor cuenta con las siguientes características:
+
+						<ul>
+							<li>Servidor Apache (Para servir las páginas web de la aplicación).</li>
+							<li>Base de datos MySQL (Para almacenar la información de la aplicación).</li>
+							<li>Seguridad SSL. (Es un protocolo de seguridad que permite que los datos se transmitan
+								de forma segura entre el servidor y el cliente).</li>
+							<li>Firewall (Es un sistema de seguridad que protege el servidor de posibles ataques).</li>
+							<li>Protección DDoS (Es un sistema de protección que evita los ataques de denegación de
+								servicio).</li>
+						</ul>
+
+
+						</p>
+					</section>
+
+					<section class="docs-section" id="item-5-2">
+						<h2 class="section-heading">Base de datos</h2>
+						<p>
+							La base de datos de Andalucía Descubre está alojada en un servidor MySQL, el gestor
+							de la base de datos es accesible a través de un navegador web y permite gestionar la
+							información de la aplicación de forma sencilla y rápida, pero para su seguridad, solo
+							permite el acceso desde las IP que estén en la lista blanca.
+
+							La base de datos de Andalucía Descubre cuenta con las siguientes tablas:
+
+						<ul>
+							<li>AD_USERS: Almacena la información de los usuarios de la aplicación.</li>
+							<li>AD_TOWNS: Almacena la información de las localidades de Andalucía.</li>
+							<li>AD_EVENTS: Almacena la información de los eventos de las localidades.</li>
+							<li>AD_DISHES: Almacena la información de los platos típicos de las localidades.</li>
+							<li>AD_MONUMENTS: Almacena la información de los monumentos de las localidades.</li>
+							<li>AD_LOGS: Almacena los registros de acciones de los usuarios.</li>
+						</ul>
+
+						<h5>Ejemplo de estructura de la tabla AD_USERS:</h5>
+
+						<div class="docs-code-block">
+							<pre><code>CREATE TABLE AD_USERS (
+	userID INT PRIMARY KEY AUTO_INCREMENT,
+	email VARCHAR(255) NOT NULL,
+	password VARCHAR(255) NOT NULL,
+	townID INT,
+	FOREIGN KEY (townID) REFERENCES AD_TOWNS(townID)
+);
+								</code></pre>
+						</div>
+
+						<h5>Ejemplo de estructura de la tabla AD_TOWNS:</h5>
+
+						<div class="docs-code-block">
+							<pre><code>CREATE TABLE AD_TOWNS (
+	townID INT PRIMARY KEY AUTO_INCREMENT,
+	townName VARCHAR(255) NOT NULL,
+	townDescription TEXT NOT NULL,
+	townImage VARCHAR(255) NOT NULL,
+	townMap VARCHAR(255) NOT NULL
+);
+								</code></pre>
+						</div>
+
+						<h5>Ejemplo de estructura de la tabla AD_EVENTS:</h5>
+
+						<div class="docs-code-block">
+							<pre><code>CREATE TABLE AD_EVENTS (
+	eventID INT PRIMARY KEY AUTO_INCREMENT,
+	townID INT,
+	eventName VARCHAR(255) NOT NULL,
+	eventDescription TEXT NOT NULL,
+	eventDate DATE NOT NULL,
+	FOREIGN KEY (townID) REFERENCES AD_TOWNS(townID)
+);
+								</code></pre>
+						</div>
+
+						<h5>Ejemplo de estructura de la tabla AD_DISHES:</h5>
+
+						<div class="docs-code-block">
+							<pre><code>CREATE TABLE AD_DISHES (
+	dishID INT PRIMARY KEY AUTO_INCREMENT,
+	townID INT,
+	dishName VARCHAR(255) NOT NULL,
+	dishDescription TEXT NOT NULL,
+	dishImage VARCHAR(255) NOT NULL,
+	FOREIGN KEY (townID) REFERENCES AD_TOWNS(townID)
+);
+								</code></pre>
+						</div>
+
+						<h5>Ejemplo de estructura de la tabla AD_MONUMENTS:</h5>
+
+						<div class="docs-code-block">
+							<pre><code>CREATE TABLE AD_MONUMENTS (
+	monumentID INT PRIMARY KEY AUTO_INCREMENT,
+	townID INT,
+	monumentName VARCHAR(255) NOT NULL,
+	monumentDescription TEXT NOT NULL,
+	monumentImage VARCHAR(255) NOT NULL,
+	FOREIGN KEY (townID) REFERENCES AD_TOWNS(townID)
+);
+								</code></pre>
+						</div>
+
+						<h5>Ejemplo de estructura de la tabla AD_LOGS:</h5>
+
+						<div class="docs-code-block">
+							<pre><code>CREATE TABLE AD_LOGS (
+	logID INT PRIMARY KEY AUTO_INCREMENT,
+	userID INT,
+	userIP VARCHAR(255) NOT NULL,
+	logDate DATETIME NOT NULL,
+	description TEXT NOT NULL,
+	type ENUM('register', 'login', 'logout', 'update', 'delete') NOT NULL,
+	FOREIGN KEY (userID) REFERENCES AD_USERS(userID)
+);
+								</code></pre>
+						</div>
+
+						</p>
+					</section>
+
+					<section class="docs-section" id="item-5-3">
+						<h2 class="section-heading">VPS</h2>
+						<p>
+							La aplicación de Andalucía Descubre está desplegada en un servidor VPS (Virtual Private
+							Server) contratado por el equipo de desarrollo, el servidor VPS está securizado tanto para
+							el
+							acceso a la consola como para el ssh, utiliza un sistema de autenticación basado en claves
+							públicas y privadas, una passphare, un sistema de autenticación de dos factores y un sistema
+							de backups
+							automáticos.
+						</p>
+
+						<h5>Características del servidor VPS:</h5>
+
+						<ul>
+							<li>Seguridad SSL. (Es un protocolo de seguridad que permite que los datos se transmitan
+								de forma segura entre el servidor y el cliente).</li>
+							<li>Firewall (Es un sistema de seguridad que protege el servidor de posibles ataques).</li>
+							<li>Protección DDoS (Es un sistema de protección que evita los ataques de denegación de
+								servicio).</li>
+							<li>Autenticación basada en claves públicas y privadas.</li>
+							<li>Passphare para la autenticación de claves privadas.</li>
+							<li>Sistema de autenticación de dos factores.</li>
+							<li>Sistema de backups automáticos.</li>
+						</ul>
+					</section>
+				</article>
+
+
+				<article class="docs-article" id="section-7">
+					<header class="docs-header">
+						<h1 class="docs-heading">Versión móvil</h1>
+						<section class="docs-intro">
+							<p>
+								La aplicación de Andalucía Descubre cuenta con una versión móvil que permite a los
+								usuarios acceder a la información de los lugares más emblemáticos de Andalucía desde
+								cualquier dispositivo móvil.
+
+								En esta sección se detallan las funcionalidades de la versión móvil de Andalucía
+								Descubre
+							</p>
+						</section>
+					</header>
+					<section class="docs-section" id="item-7-1">
+						<h2 class="section-heading">Funcionalidades</h2>
+						<p>
+							La versión móvil de Andalucía Descubre cuenta con las siguientes funcionalidades:
+
+						<ul>
+							<li>Interfaz intuitiva y fácil de usar.</li>
+							<li>Acceso a la información de las localidades, eventos, platos y monumentos de
+								Andalucía.
+							</li>
+							<li>Funcionalidades de búsqueda y filtrado de la información.</li>
+							<li>Posibilidad de crear una cuenta de usuario y autenticarse en la aplicación.</li>
+							<li>Acceso a la información de usuario y posibilidad de actualizarla.</li>
+							<li>Funcionalidades de administración de usuarios (solo para administradores).</li>
+							<li>Funcionalidades de administración de logs (solo para administradores).</li>
+						</ul>
+					</section>
+
+					<section class="docs-section" id="item-7-2">
+						<h2 class="section-heading">Diseño</h2>
+						<p>
+							La versión móvil de Andalucía Descubre cuenta con un diseño responsive que se adapta a
+							cualquier dispositivo móvil, el diseño de la aplicación es limpio y minimalista, con una
+							interfaz intuitiva y fácil de usar.
+
+							El diseño de la aplicación móvil se basa en los siguientes principios:
+
+						<ul>
+							<li>Interfaz intuitiva y fácil de usar.</li>
+							<li>Diseño responsive que se adapta a cualquier dispositivo móvil.</li>
+							<li>Colores y tipografías agradables a la vista.</li>
+							<li>Iconos y botones fáciles de identificar y usar.</li>
+							<li>Menús y navegación sencilla.</li>
+						</ul>
+						</p>
+					</section>
+				</article>
+
+
+				<article class="docs-article" id="section-8">
+					<header class="docs-header">
+						<h1 class="docs-heading">Gestión de usuarios</h1>
+						<section class="docs-intro">
+							<p>
+								En este apartado se detalla cómo se gestionan los usuarios en la aplicación de Andalucía
+								Descubre y a quién está destinado cada tipo de usuario.
+
+								La aplicación de Andalucía Descubre cuenta con dos tipos de usuarios: usuarios normales,
+								gestores de pueblos y administradores de la aplicación.
+							</p>
+						</section>
+					</header>
+					<section class="docs-section" id="item-8-1">
+						<h2 class="section-heading">Usuarios</h2>
+						<p>
+							Son aquellos que tan solo visitan la aplicación para obtener información sobre los lugares
+							más emblemáticos de Andalucía, los usuarios pueden acceder a la información de las
+							localidades, eventos, platos y monumentos de Andalucía, así como buscar y filtrar la
+							información según sus preferencias.
+
+							Los usuarios no crearán cuentas, por lo que no tendrán acceso a la información de usuario
+							ni a las funcionalidades de administración de usuarios y logs.
+
+							Los usuarios pueden acceder a la información de la aplicación sin necesidad de autenticarse,
+							pero no podrán realizar acciones que requieran autenticación.
+						</p>
+					</section>
+
+					<section class="docs-section" id="item-8-2">
+						<h2 class="section-heading">Gestores de pueblo</h2>
+						<p>
+							Son aquellos que se encargan de gestionar la información de las localidades de Andalucía,
+							los gestores de pueblo pueden crear, actualizar y eliminar la información de las
+							localidades, eventos, platos y monumentos de Andalucía, así como buscar y filtrar la
+							información según sus preferencias.
+
+							Los gestores de pueblo pueden acceder a la información de la aplicación y realizar acciones
+							que requieran autenticación, pero no podrán acceder a las funcionalidades de administración
+							de usuarios y logs.
+
+							Este tipo de cuenta irá destinada a los ayuntamientos y entidades locales que deseen
+							promocionar los lugares más emblemáticos de sus localidades.
+						</p>
+					</section>
+
+					<section class="docs-section" id="item-8-3">
+						<h2 class="section-heading">Administradores</h2>
+						<p>
+							Son aquellos que se encargan de gestionar la información de la aplicación de Andalucía
+							Descubre, los administradores pueden crear, actualizar y eliminar la información de los
+							usuarios, localidades, eventos, platos y monumentos de Andalucía, así como buscar y filtrar
+							la información según sus preferencias.
+
+							Los administradores pueden acceder a la información de la aplicación y realizar acciones que
+							requieran autenticación, así como acceder a las funcionalidades de administración de
+							usuarios
+							y logs.
+
+							Este tipo de cuenta irá destinada al equipo de desarrollo de la aplicación o al encargado de
+							una entidad pública o privada que desee gestionar la información de la aplicación.
+						</p>
+					</section>
+				</article>
+
+
+				<article class="docs-article" id="section-9">
+					<header class="docs-header">
+						<h1 class="docs-heading">FAQs</h1>
+						<section class="docs-intro">
+							<p>
+								En esta sección se detallan las preguntas frecuentes sobre la aplicación de Andalucía
+								Descubre y se proporcionan respuestas a las dudas más comunes de los usuarios.
+							</p>
+						</section>
+					</header>
+					<section class="docs-section" id="item-9-1">
+						<h2 class="section-heading">Preguntas de usuarios</h2>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>¿Qué es Andalucía Descubre?</h5>
+						<p>
+							Andalucía Descubre es una aplicación web que permite a los usuarios descubrir los lugares
+							más emblemáticos de Andalucía, como localidades, eventos, platos y monumentos, así como
+							obtener información detallada sobre cada lugar.
+						</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>¿Cómo puedo acceder a la
+							información de Andalucía Descubre?</h5>
+						<p>
+							Puedes acceder a la información de Andalucía Descubre a través de la aplicación web, donde
+							encontrarás la información de las localidades, eventos, platos y monumentos de Andalucía,
+							así
+							como la posibilidad de buscar y filtrar la información según tus preferencias.
+						</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>¿Puedo crear una cuenta en
+							Andalucía Descubre?</h5>
+						<p>
+							No, los usuarios no pueden crear cuentas en Andalucía Descubre, ya que la aplicación está
+							destinada a proporcionar información sobre los lugares más emblemáticos de Andalucía de
+							forma que solo los gestores de pueblo y los administradores pueden crear cuentas.
+						</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>¿Cómo puedo contactar con el
+							equipo de Andalucía Descubre?</h5>
+						<p>
+							Puedes contactar con el equipo de Andalucía Descubre a través de nuestro correo electrónico
+						</p>
+					</section>
+
+					<section class="docs-section" id="item-9-2">
+						<h2 class="section-heading">Preguntas técnicas</h2>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>¿Cómo puedo acceder a la API de
+							Andalucía Descubre?</h5>
+						<p>
+							Puedes acceder a la API de Andalucía Descubre a través de los endpoints disponibles en la
+							documentación de la API, donde encontrarás la información necesaria para realizar peticiones
+							a la API y obtener la información de los lugares más emblemáticos de Andalucía.
+
+							La url de la API es: https://andaluciadescubre.usuariozombie.com/
+						</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>¿Qué tipo de autenticación
+							utiliza la API de Andalucía Descubre?</h5>
+						<p>
+							La API de Andalucía Descubre utiliza tokens JWT (JSON Web Tokens) para proteger los
+							endpoints de la API y garantizar que solo los usuarios autorizados puedan acceder a la
+							información.
+
+							Los tokens JWT son cadenas de texto codificadas que contienen información sobre el usuario
+							autenticado, así como una firma digital que garantiza la integridad del token.
+						</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>¿Necesito permiso para desarrollar
+							una aplicación con la API de Andalucía Descubre?</h5>
+						<p>
+							No, no necesitas permiso para desarrollar una aplicación con la API de Andalucía Descubre,
+							ya que la API es de uso público y está disponible para todos los desarrolladores que deseen
+							acceder a la información de los lugares más emblemáticos de Andalucía.
+						</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>¿Cómo puedo contribuir al
+							desarrollo de la API de Andalucía Descubre?</h5>
+						<p>
+							Puedes contribuir al desarrollo de la API de Andalucía Descubre a través de nuestro
+							repositorio en GitHub, donde encontrarás el código fuente de la API y podrás colaborar en su
+							desarrollo.
+						</p>
+					</section>
+
+					<section class="docs-section" id="item-9-3">
+						<h2 class="section-heading">Preguntas de gestores de pueblo</h2>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>¿Cómo puedo gestionar la
+							información de mi localidad en Andalucía Descubre?</h5>
+						<p>
+							Puedes gestionar la información de tu localidad en Andalucía Descubre a través de la
+							aplicación web, debes registrarte como gestor de pueblo y ser verificado por un
+							administrador para poder acceder a las funcionalidades de gestión de la información de tu
+							localidad.
+						</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>¿Qué tipo de información puedo
+							gestionar como gestor de pueblo?</h5>
+						<p>
+							Como gestor de pueblo puedes gestionar la información de tu localidad, incluyendo la
+							información de los eventos, platos y monumentos de tu localidad, así como buscar y filtrar
+							la información según tus preferencias.
+						</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>¿Cómo puedo promocionar mi
+							localidad en Andalucía Descubre?</h5>
+						<p>
+							Puedes promocionar tu localidad en Andalucía Descubre a través de la aplicación web,
+							gestionando la información de tu localidad y creando eventos, platos y monumentos que
+							destaquen los lugares más emblemáticos de tu localidad.
+						</p>
+					</section>
+				</article>
+
+				<footer class="footer">
+					<div class="container text-center py-5">
+						<small class="copyright">
+							&copy; 2024 <a href="https://andaluciadescubre.usuariozombie.com/">Andalucía Descubre</a>.
+							Todos
+							los derechos reservados.
+						</small>
+						<ul class="social-list list-unstyled pt-4 mb-0">
+							<li class="list-inline-item"><a href="https://github.com/usuariozombie"><i
+										class="fab fa-github fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://x.com/AndaluciaJunta"><i
+										class="fab fa-twitter fa-fw"></i></a></li>
+							<li class="list-inline-item"><a
+									href="https://www.facebook.com/AndaluciaJunta/?locale=es_ES"><i
+										class="fab fa-facebook-f fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.instagram.com/andaluciajunta/"><i
+										class="fab fa-instagram fa-fw"></i></a></li>
+						</ul>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+	<script src="assets/plugins/smoothscroll.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+	<script src="assets/js/highlight-custom.js"></script>
+	<script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+	<script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+	<script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>
