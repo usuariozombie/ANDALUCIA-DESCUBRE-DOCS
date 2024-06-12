@@ -56,7 +56,8 @@
 						<li class="list-inline-item"><a href="https://www.instagram.com/andaluciajunta/"><i
 									class="fab fa-instagram fa-fw"></i></a></li>
 					</ul>
-					<a href="https://github.com/usuariozombie/ANDALUCIA-DESCUBRE-API" class="btn btn-primary d-none d-lg-flex">GitHub</a>
+					<a href="https://github.com/usuariozombie/ANDALUCIA-DESCUBRE-API"
+						class="btn btn-primary d-none d-lg-flex">GitHub</a>
 				</div>
 			</div>
 		</div>
@@ -157,6 +158,184 @@
 
 						<script
 							src="https://gist.github.com/usuariozombie/17cbd31c55807d20ddbf9306b0b6d3f8.js"></script>
+
+
+						<h5>Diagrama de clases de la API:</h5>
+						<p>El diagrama de clases de la API de Andalucía Descubre muestra la estructura de la API y las
+							relaciones entre las diferentes clases y entidades.</p>
+						<!--diagrama de clases hecho en codeblock con esto-->
+						<pre><code>
+						+------------------+
+						|      TownBase    |
+						+------------------+
+						| +townName: str   |
+						| +townDescription:|
+						|   Optional[str]  |
+						| +townImage: str  |
+						| +townMap:        |
+						|   Optional[str]  |
+						| +townProvince:   |
+						|   Optional[str]  |
+						| +townVisibility: |
+						|   Optional[bool] |
+						+------------------+
+							^
+							|
+						+------------------+     +------------------+
+						|    TownCreate    |     |      Town        |
+						+------------------+     +------------------+
+						|   (inherits      |     | +townId: int     |
+						|    TownBase)     |     +------------------+
+						+------------------+               ^
+										   |
+									    +------------------	+
+									    |    TownRouter    	|
+									    +------------------	+
+									    | +create_town()   	|
+									    | +get_towns()     	|
+									    | +get_town()      	|
+									    | +update_town()   	|
+									    | +delete_town()   	|
+									    | +create_dish()   	|
+									    | +get_dishes()    	|
+									    | +create_monument()|
+									    | +get_monuments() 	|
+									    | +create_event()  	|
+									    | +get_events()    	|
+									    +------------------	+
+						
+						+------------------+     +------------------+
+						|     DishBase     |     |      Dish        |
+						+------------------+     +------------------+
+						| +dishName: str   |     | +dishId: int     |
+						| +dishDescription:|     | +townId: int     |
+						|   Optional[str]  |     +------------------+
+						| +dishImage:      |
+						|   Optional[str]  |
+						+------------------+
+							^
+							|
+						+------------------+
+						|    DishCreate    |
+						+------------------+
+						|   (inherits      |
+						|    DishBase)     |
+						+------------------+
+						
+						+------------------+     +------------------+
+						|   MonumentBase   |     |    Monument      |
+						+------------------+     +------------------+
+						| +monumentName:   |     | +monumentId: int |
+						|   str            |     | +townId: int     |
+						| +monumentDesc:   |     +------------------+
+						|   Optional[str]  |
+						| +monumentImage:  |
+						|   Optional[str]  |
+						+------------------+
+							^
+							|
+						+------------------+
+						|  MonumentCreate  |
+						+------------------+
+						|   (inherits      |
+						|    MonumentBase) |
+						+------------------+
+						
+						+------------------+     +------------------+
+						|    EventBase     |     |      Event       |
+						+------------------+     +------------------+
+						| +eventName: str  |     | +eventId: int    |
+						| +eventDate:      |     | +townId: int     |
+						|   Optional[str]  |     +------------------+
+						| +eventDesc:      |
+						|   Optional[str]  |
+						+------------------+
+							^
+							|
+						+------------------+
+						|   EventCreate    |
+						+------------------+
+						|   (inherits      |
+						|    EventBase)    |
+						+------------------+
+						
+						+------------------+  
+						|    AuthRouter    |
+						+------------------+
+						| +register()      |
+						| +login()         |
+						| +user_info()     |
+						| +get_users()     |
+						| +admin_login()   |
+						| +update_user()   |
+						+------------------+
+						</code></pre>
+
+						<h5>Diagrama de casos de uso:</h5>
+						<pre>
+							<code>
+								
+									    +-------------------------+
+									    |                         |
+									    |   Usuario Normal        |
+									    |                         |
+									    +-----------+-------------+
+											|
+											v
+					 		Acceder a la información de los lugares emblemáticos de Andalucía
+											|
+											|
+											v
+							   	Buscar y filtrar la información según preferencias
+
+
+				   
+								 	      +-------------------------+
+								 	      |                         |
+								 	      |   Gestor de Pueblo      |
+								 	      |                         |
+								 	      +-----------+-------------+
+											  |
+											  v
+									Gestionar información de las localidades
+											  |
+											  |
+											  v
+									  Gestionar información de eventos
+											  |
+											  |
+											  v
+									   Gestionar información de platos
+											  |
+											  |
+											  v
+									 Gestionar información de monumentos
+
+
+				   
+								  	      +-------------------------+
+								  	      |                         |
+								  	      |   Administrador         |
+								  	      |                         |
+								  	      +-----------+-------------+
+											  |
+											  v
+										  Gestionar usuarios
+											  |
+											  |
+											  v
+							  		Acceder a funcionalidades de administración
+				   
+							</code>
+						</pre>
+
+						<!--Diagrama entidad relacion pero es una imagen-->
+
+						<h5>Diagrama entidad-relación</h5>
+
+						<!--Imagen-->
+						<img src="https://media.discordapp.net/attachments/888067531846328390/1250455543836049510/Event_Creator_Entity_Relationship_Diagram_1.png?ex=666b00f9&is=6669af79&hm=0fcf66d67307f89319332ee962fec04c56d2e74ac22c77c841cbe1e6b85f9f04&=&format=webp&quality=lossless&width=601&height=468"
+							alt="Diagrama entidad-relación" class="img-fluid shadow rounded">
 
 
 					</header>
@@ -517,7 +696,7 @@ ng serve
 								concreto.</li>
 						</ul>
 
-						<h5>Ejemplo de respuesta de cada endpoint:</h5>
+						<h5>Ejemplo de respuesta para casos de prueba de cada endpoint:</h5>
 
 						<div class="docs-code-block">
 							<!-- ** /towns (POST) ** -->
